@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import model.MusicGame;
 
 import java.awt.*;
 import java.io.File;
@@ -19,13 +20,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-
-
-        String musicFile = "MusicGame/8_music.mp3";     // For example
-
-        Media sound = new Media(new File(musicFile).toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
+        MusicGame musicGame =new MusicGame();
 
         /*
         mediaPlayer = new MediaPlayer(mp3MusicFile);

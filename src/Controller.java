@@ -21,6 +21,7 @@ import javafx.scene.shape.*;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import model.MusicGame;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -63,6 +64,9 @@ public class Controller {
     @FXML private Label Livelabel = new Label("Live: 30");
     @FXML private Label healths  = new Label("25");
     @FXML private Label Moneylabel = new Label("Money: 70" );
+
+    private MusicGame musicGame = new MusicGame();
+
     final int []Money = {70};
     final int[] Live = {30};
     private ArrayList<Tower> normalTowerArrayList = new ArrayList<>();
@@ -99,6 +103,7 @@ public class Controller {
             }
         }
     };
+
     NextLevel nextLevelGame = new NextLevel();
 
     public void test() {
