@@ -20,13 +20,13 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-        /*
-        String musicFile = "8_music.mp3";     // For example
+
+        String musicFile = "MusicGame/8_music.mp3";     // For example
 
         Media sound = new Media(new File(musicFile).toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
-         */
+
         /*
         mediaPlayer = new MediaPlayer(mp3MusicFile);
         mediaPlayer.setAutoPlay(true);
