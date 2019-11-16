@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView disable="true" fitHeight="561.0" fitWidth="745.0" layoutX="-8.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@AssetsKit_1/shapes/65.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="87.0" fitWidth="256.0" layoutX="220.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@model/resources/1.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="223.0" layoutY="79.0" mnemonicParsing="false" onAction="#test" opacity="0.0" prefHeight="62.0" prefWidth="250.0" text="Button" />
+      <AnchorPane fx:id="p1" layoutX="232.0" layoutY="291.0" prefHeight="32.0" prefWidth="169.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@AssetsKit_1/buttons/DefineButton2_19/1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="button" mnemonicParsing="false" onAction="#play" opacity="0.0" prefHeight="46.0" prefWidth="200.0" text="Button" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="p2" disable="true" layoutX="5.0" layoutY="181.0" opacity="0.0" prefHeight="200.0" prefWidth="701.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="33.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@AssetsKit_1/shapes/22.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="249.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@AssetsKit_1/shapes/25.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="473.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@AssetsKit_1/shapes/28.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="button3" layoutX="475.0" layoutY="54.0" mnemonicParsing="false" onAction="#setButton3" opacity="0.0" prefHeight="141.0" prefWidth="164.0" text="Button" />
+            <Button fx:id="button1" layoutX="29.0" layoutY="48.0" mnemonicParsing="false" onAction="#setButton1" opacity="0.0" prefHeight="150.0" prefWidth="172.0" text="Button" />
+            <Button fx:id="button2" layoutX="245.0" layoutY="53.0" mnemonicParsing="false" onAction="#setButton2" opacity="0.0" prefHeight="141.0" prefWidth="172.0" text="Button" />
+            <Label layoutX="95.0" layoutY="14.0" prefHeight="30.0" prefWidth="53.0" text="Easy">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="14.0" prefHeight="30.0" prefWidth="99.0" text="Medium">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="541.0" layoutY="19.0" prefHeight="30.0" prefWidth="65.0" text="Hard">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField layoutX="24.0" layoutY="437.0" />
+      <Label layoutX="36.0" layoutY="399.0" text="Enter Unlock Code">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="54.0" fitWidth="148.0" layoutX="258.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@AssetsKit_1/buttons/DefineButton2_40/1.png" />
+         </image></ImageView>
+      <Button layoutX="258.0" layoutY="411.0" mnemonicParsing="false" opacity="0.0" prefHeight="62.0" prefWidth="133.0" text="Button" />
+   </children>
+</AnchorPane>
