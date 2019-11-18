@@ -5,14 +5,14 @@ import javafx.scene.layout.Pane;
 public class NormalEnemy extends Enemy {
     public NormalEnemy()
     {
-        image = new Image("AssetsKit_1/shapes/232.png");
+        image = new Image("AssetsKit_1/shapes/ne.png");
         imageView = new ImageView(image);
-        imageView.setFitWidth(30);
+        imageView.setFitWidth(50);
         imageView.setPreserveRatio(true);
-        hp = 80;
-        speed = 20000;
-        armor = 5;
-        reward = 4;
+        hp = 100;
+        speed = 10000;
+        armor = 10;
+        reward = 10;
         healthMax = 80;
         healthBar = new HealthBar();
 

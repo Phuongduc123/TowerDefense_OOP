@@ -1,5 +1,4 @@
 import javafx.animation.*;
-import javafx.fxml.Initializable;
 import javafx.geometry.Bounds;
 import javafx.scene.*;
 import javafx.scene.control.Label;
@@ -10,20 +9,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.PixelReader;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.AudioClip;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.*;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import model.MusicGame;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class Controller {
@@ -79,7 +71,7 @@ public class Controller {
                 normalTowerArrayList.get(i).setTime(normalTowerArrayList.get(i).getTime() + 1);
                 for (int j = 0; j < nextLevelGame.getNextLevel().get(Level-1).size(); j++)
                 {
-                    if (nextLevelGame.getNextLevel().get(Level - 1).get(j).imageView.getBoundsInParent().intersects(normalTowerArrayList.get(i).getImageView2().getBoundsInParent()) && pane.getChildren().contains(nextLevelGame.getNextLevel().get(Level-1).get(j).imageView)) {
+                    if (nextLevelGame.getNextLevel().get(Level - 1).get(j).imageView.getBoundsInParent().intersects(normalTowerArrayList.get(i).getImageViewRange().getBoundsInParent()) && pane.getChildren().contains(nextLevelGame.getNextLevel().get(Level-1).get(j).imageView)) {
                         //normalTowerArrayList.get(i).getImageView4().setRotate(Math.atan2(nextLevelgame.getNextlevel().get(Level-1).get(j).getPosY() - ));
                         normalTowerArrayList.get(i).onRotate(nextLevelGame.getNextLevel().get(Level - 1).get(j));
                         if (normalTowerArrayList.get(i).getTime() >= normalTowerArrayList.get(i).getSpeed()) {
@@ -94,7 +86,7 @@ public class Controller {
             }
             for (int i = 0; i < nextLevelGame.getNextLevel().get(Level-1).size() ; i ++ )
             {
-                if (pane.getChildren().contains(nextLevelGame.getNextLevel().get(Level-1).get(i).imageView)&&  ! nextLevelGame.getNextLevel().get(Level - 1).get(i).imageView.getBoundsInParent().intersects(co.getBoundsInParent()))
+                if (pane.getChildren().contains(nextLevelGame.getNextLevel().get(Level-1).get(i).imageView) && !nextLevelGame.getNextLevel().get(Level - 1).get(i).imageView.getBoundsInParent().intersects(co.getBoundsInParent()))
                 {
                     Live[0] -- ;
                     Livelabel.setText("Live:" + Live[0]);
@@ -105,17 +97,6 @@ public class Controller {
     };
 
     NextLevel nextLevelGame = new NextLevel();
-
-    public void test() {
-        System.out.println("test");
-    }
-
-    public void play() {
-        p1.setDisable(true);
-        p1.setOpacity(0);
-        p2.setDisable(false);
-        p2.setOpacity(1);
-    }
 
     public void setButtonPlay(javafx.event.ActionEvent actionEvent) throws Exception {
 
@@ -128,15 +109,6 @@ public class Controller {
         //paneE.setOpacity(0);
 
 
-    }
-
-    public void setButton3(javafx.event.ActionEvent actionEvent) throws Exception {
-
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("map.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
 
     public void setButton1(javafx.event.ActionEvent actionEvent) throws Exception {
@@ -171,28 +143,19 @@ public class Controller {
 
     }
 
-    public void chay1(ImageView imageView, Path path, double X, double Y, double X1, double Y1) {
-        MoveTo moveTo = new MoveTo(X, Y);
-        LineTo lineTo = new LineTo(X1, Y1);
-        LineTo lineTo1 = new LineTo(330, 150);
-        LineTo lineTo2 = new LineTo(330, 150);
-        path.getElements().addAll(moveTo, lineTo);
-    }
-
-
-    public void taothap(MouseEvent mouseEvent) {
+    public void createNormalTower(MouseEvent mouseEvent) {
         //final  boolean []check = {true} ;
 
         NormalTower normalTower = new NormalTower();
         if (Money[0] >= normalTower.getPrice()) {
 
-            ImageView imageView1 = new ImageView(normalTower.getImageView3().getImage());
+            ImageView imageView1 = new ImageView(normalTower.getImageViewBase().getImage());
             imageView1.setFitHeight(21);
             imageView1.setFitWidth(21);
-            ImageView imageView2 = new ImageView(normalTower.getImageView4().getImage());
+            ImageView imageView2 = new ImageView(normalTower.getImageViewGun().getImage());
             imageView2.setFitWidth(18);
             imageView2.setFitHeight(25);
-            ImageView imageView3 = new ImageView(normalTower.getImageView2().getImage());
+            ImageView imageView3 = new ImageView(normalTower.getImageViewRange().getImage());
             imageView3.setFitWidth(140);
             imageView3.setFitHeight(140);
 
@@ -207,7 +170,6 @@ public class Controller {
             imageView2.setLayoutX(mouseEvent.getSceneX());
             imageView2.setLayoutY(mouseEvent.getSceneY());
 
-
             pane.setOnMouseMoved(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
@@ -220,7 +182,6 @@ public class Controller {
                     imageView2.setLayoutX(mouseEvent.getSceneX() - 9);
                     imageView2.setLayoutY(mouseEvent.getSceneY() - 16.5);
 
-
                 }
             });
 
@@ -232,37 +193,18 @@ public class Controller {
                     Bounds objB = imageTest.localToScene(imageTest.getBoundsInLocal());
 
                     boolean check = objA.intersects(objB);
-                    /*
-                    for (int i =0; i < normalTowerArrayList.size(); i++)
-                    {
-                        //System.out.println(normalTowerArrayList.size());
-                        //System.out.println(imageView1.getBoundsInParent().intersects(normalTowerArrayList.get(i).getImageView3().getBoundsInParent()));
-                        if (imageView1.getBoundsInParent().intersects(normalTowerArrayList.get(i).getImageView3().getBoundsInParent()))
-                        {
-                            check = false;
-                        }
-                    }
-                    */
 
-                    //System.out.println(imageView1.intersects(myPath.getBoundsInLocal()));
                     if (!check) {
-                        pane.getChildren().addAll(normalTower.getImageView3(), normalTower.getImageView2(), normalTower.getImageView4());
-                        normalTower.getImageView2().setLayoutX(mouseEvent.getSceneX() - 70);
-                        normalTower.getImageView2().setLayoutY(mouseEvent.getSceneY() - 70);
-                        normalTower.getImageView3().setLayoutX(mouseEvent.getSceneX() - 10.5);
-                        normalTower.getImageView3().setLayoutY(mouseEvent.getSceneY() - 10.5);
-                        normalTower.getImageView4().setLayoutX(mouseEvent.getSceneX() - 9);
-                        normalTower.getImageView4().setLayoutY(mouseEvent.getSceneY() - 16.5);
-                        normalTower.getImageView2().setOpacity(0);
+                        pane.getChildren().addAll(normalTower.getImageViewBase(), normalTower.getImageViewRange(), normalTower.getImageViewGun());
+                        normalTower.getImageViewRange().setLayoutX(mouseEvent.getSceneX() - 70);
+                        normalTower.getImageViewRange().setLayoutY(mouseEvent.getSceneY() - 70);
+                        normalTower.getImageViewBase().setLayoutX(mouseEvent.getSceneX() - 10.5);
+                        normalTower.getImageViewBase().setLayoutY(mouseEvent.getSceneY() - 10.5);
+                        normalTower.getImageViewGun().setLayoutX(mouseEvent.getSceneX() - 9);
+                        normalTower.getImageViewGun().setLayoutY(mouseEvent.getSceneY() - 16.5);
+                        normalTower.getImageViewRange().setOpacity(0);
                         pane.getChildren().removeAll(imageView1, imageView2, imageView3);
                     }
-                    //check[0] = true;
-                    //pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                      //  @Override
-                      //  public void handle(MouseEvent mouseEvent) {
-
-                      //  }
-                    //});
                 }
             });
 
@@ -274,16 +216,16 @@ public class Controller {
 
     }
 
-    public void taothapST(MouseEvent mouseEvent) {
+    public void createSniperTower(MouseEvent mouseEvent) {
         SniperTower sniperTower = new SniperTower();
         if ( Money[0] >= sniperTower.getPrice()) {
-            ImageView imageView1 = new ImageView(sniperTower.getImageView3().getImage());
+            ImageView imageView1 = new ImageView(sniperTower.getImageViewBase().getImage());
             imageView1.setFitHeight(21);
             imageView1.setFitWidth(21);
-            ImageView imageView2 = new ImageView(sniperTower.getImageView4().getImage());
+            ImageView imageView2 = new ImageView(sniperTower.getImageViewGun().getImage());
             imageView2.setFitWidth(27);
             imageView2.setFitHeight(13.5);
-            ImageView imageView3 = new ImageView(sniperTower.getImageView2().getImage());
+            ImageView imageView3 = new ImageView(sniperTower.getImageViewRange().getImage());
             imageView3.setFitWidth(200);
             imageView3.setFitHeight(200);
 
@@ -313,48 +255,45 @@ public class Controller {
                 public void handle(MouseEvent mouseEvent) {
                     boolean check = true;
                     for (int i = 0; i < normalTowerArrayList.size(); i++) {
-                        if (imageView1.getBoundsInParent().intersects(normalTowerArrayList.get(i).getImageView3().getBoundsInParent())) {
+                        if (imageView1.getBoundsInParent().intersects(normalTowerArrayList.get(i).getImageViewBase().getBoundsInParent())) {
                             check = false;
                         }
                     }
                     if (check) {
-                        pane.getChildren().addAll(sniperTower.getImageView3(), sniperTower.getImageView2(), sniperTower.getImageView4());
-                        sniperTower.getImageView2().setLayoutX(mouseEvent.getSceneX() - 100);
-                        sniperTower.getImageView2().setLayoutY(mouseEvent.getSceneY() - 100);
-                        sniperTower.getImageView3().setLayoutX(mouseEvent.getSceneX() - 10.5);
-                        sniperTower.getImageView3().setLayoutY(mouseEvent.getSceneY() - 10.5);
-                        sniperTower.getImageView4().setLayoutX(mouseEvent.getSceneX() - 13.5);
-                        sniperTower.getImageView4().setLayoutY(mouseEvent.getSceneY() - 6.75);
-                        sniperTower.getImageView2().setOpacity(0);
+                        pane.getChildren().addAll(sniperTower.getImageViewBase(), sniperTower.getImageViewRange(), sniperTower.getImageViewGun());
+                        sniperTower.getImageViewRange().setLayoutX(mouseEvent.getSceneX() - 100);
+                        sniperTower.getImageViewRange().setLayoutY(mouseEvent.getSceneY() - 100);
+                        sniperTower.getImageViewBase().setLayoutX(mouseEvent.getSceneX() - 10.5);
+                        sniperTower.getImageViewBase().setLayoutY(mouseEvent.getSceneY() - 10.5);
+                        sniperTower.getImageViewGun().setLayoutX(mouseEvent.getSceneX() - 13.5);
+                        sniperTower.getImageViewGun().setLayoutY(mouseEvent.getSceneY() - 6.75);
+                        sniperTower.getImageViewRange().setOpacity(0);
                         pane.getChildren().removeAll(imageView1, imageView2, imageView3);
                         pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
                             @Override
                             public void handle(MouseEvent mouseEvent) {
-
                             }
                         });
                     }
                 }
-
             });
             normalTowerArrayList.add(sniperTower);
             Money[0] = Money[0] - sniperTower.getPrice();
             Moneylabel.setText("Money: " + Money[0]);
         }
-
     }
 
-    public void taothapMT(MouseEvent mouseEvent) {
+    public void createMachineGunTower(MouseEvent mouseEvent) {
 
         MachineGunTower machineGunTower = new MachineGunTower();
         if ( Money[0] >= machineGunTower.getPrice()) {
-            ImageView imageView1 = new ImageView(machineGunTower.getImageView3().getImage());
+            ImageView imageView1 = new ImageView(machineGunTower.getImageViewBase().getImage());
             imageView1.setFitHeight(21);
             imageView1.setFitWidth(21);
-            ImageView imageView2 = new ImageView(machineGunTower.getImageView4().getImage());
+            ImageView imageView2 = new ImageView(machineGunTower.getImageViewGun().getImage());
             imageView2.setFitWidth(14);
             imageView2.setFitHeight(21.5);
-            ImageView imageView3 = new ImageView(machineGunTower.getImageView2().getImage());
+            ImageView imageView3 = new ImageView(machineGunTower.getImageViewRange().getImage());
             imageView3.setFitWidth(100);
             imageView3.setFitHeight(100);
 
@@ -384,26 +323,20 @@ public class Controller {
                 public void handle(MouseEvent mouseEvent) {
                     boolean check = true;
                     for (int i = 0; i < normalTowerArrayList.size(); i++) {
-                        if (imageView1.getBoundsInParent().intersects(normalTowerArrayList.get(i).getImageView3().getBoundsInParent())) {
+                        if (imageView1.getBoundsInParent().intersects(normalTowerArrayList.get(i).getImageViewBase().getBoundsInParent())) {
                             check = false;
                         }
                     }
                     if (check) {
-                        pane.getChildren().addAll(machineGunTower.getImageView3(), machineGunTower.getImageView2(), machineGunTower.getImageView4());
-                        machineGunTower.getImageView2().setLayoutX(mouseEvent.getSceneX() - 50);
-                        machineGunTower.getImageView2().setLayoutY(mouseEvent.getSceneY() - 50);
-                        machineGunTower.getImageView3().setLayoutX(mouseEvent.getSceneX() - 10.5);
-                        machineGunTower.getImageView3().setLayoutY(mouseEvent.getSceneY() - 10.5);
-                        machineGunTower.getImageView4().setLayoutX(mouseEvent.getSceneX() - 7);
-                        machineGunTower.getImageView4().setLayoutY(mouseEvent.getSceneY() - 13.75);
-                        machineGunTower.getImageView2().setOpacity(0);
+                        pane.getChildren().addAll(machineGunTower.getImageViewBase(), machineGunTower.getImageViewRange(), machineGunTower.getImageViewGun());
+                        machineGunTower.getImageViewRange().setLayoutX(mouseEvent.getSceneX() - 50);
+                        machineGunTower.getImageViewRange().setLayoutY(mouseEvent.getSceneY() - 50);
+                        machineGunTower.getImageViewBase().setLayoutX(mouseEvent.getSceneX() - 10.5);
+                        machineGunTower.getImageViewBase().setLayoutY(mouseEvent.getSceneY() - 10.5);
+                        machineGunTower.getImageViewGun().setLayoutX(mouseEvent.getSceneX() - 7);
+                        machineGunTower.getImageViewGun().setLayoutY(mouseEvent.getSceneY() - 13.75);
+                        machineGunTower.getImageViewRange().setOpacity(0);
                         pane.getChildren().removeAll(imageView1, imageView2, imageView3);
-                        pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                            @Override
-                            public void handle(MouseEvent mouseEvent) {
-
-                            }
-                        });
                     }
                 }
             });
@@ -420,11 +353,12 @@ public class Controller {
         pane.getChildren().add(normalEnemy.healthBar);
         normalEnemy.imageView.setLayoutX(0);
         normalEnemy.imageView.setLayoutY(0);
+
         Rotate rotate = new Rotate();
         rotate.setAngle(180);
-        rotate.setPivotX(10);
+        rotate.setPivotX(20);
         rotate.setPivotY(21 / (44.0 / 20.0) / 2);
-        normalEnemy.imageView.getTransforms().add(rotate);
+        //normalEnemy.imageView.getTransforms().add(rotate);
 
         MyPath myPath = new MyPath();
 
@@ -440,7 +374,7 @@ public class Controller {
                     nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).imageView.setLayoutX(0);
                     nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).imageView.setLayoutY(0);
 
-                    nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).updateHealthBar();
+                    //nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).updateHealthBar();
 
                     PathTransition pathTransition = new PathTransition();
                     pathTransition.setNode(nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).imageView);
@@ -659,7 +593,7 @@ public class Controller {
 
 
     public void TowerSetImageView(Tower tower) {
-        tower.getImageView4().setOnMouseClicked(new EventHandler<MouseEvent>() {
+        tower.getImageViewGun().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 System.out.println(tower.getPosX());

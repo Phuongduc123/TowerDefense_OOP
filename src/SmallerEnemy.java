@@ -4,14 +4,14 @@ import javafx.scene.image.ImageView;
 public class SmallerEnemy extends Enemy {
     public SmallerEnemy()
     {
-        image = new Image("AssetsKit_1/shapes/246.png");
+        image = new Image("AssetsKit_1/shapes/se.png");
         imageView = new ImageView(image);
-        imageView.setFitWidth(20);
+        imageView.setFitWidth(30);
         imageView.setPreserveRatio(true);
-        hp = 70 ;
+        hp = 50;
         speed = 15000;
         armor = 2;
-        reward = 5 ;
+        reward = 5;
     }
 
     @Override

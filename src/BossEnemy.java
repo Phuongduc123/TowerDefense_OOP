@@ -3,14 +3,14 @@ import javafx.scene.image.ImageView;
 
 public class BossEnemy extends Enemy {
     public BossEnemy() {
-        image = new Image("AssetsKit_1/shapes/249.png");
+        image = new Image("AssetsKit_1/shapes/boss.png");
         imageView = new ImageView(image);
-        imageView.setFitWidth(30);
+        imageView.setFitWidth(70);
         imageView.setPreserveRatio(true);
-        hp = 2000 ;
-        speed = 50000;
-        armor = 20;
-        reward = 110 ;
+        hp = 1000;
+        speed = 5000;
+        armor = 50;
+        reward = 50;
     }
 
     @Override

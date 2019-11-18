@@ -7,6 +7,7 @@ public class NextLevel {
         nextlevel = new ArrayList<ArrayList<Enemy>>();
         for ( int i = 0 ; i < 30 ; i ++)
             nextlevel.add(new ArrayList<Enemy>());
+
         for ( int i = 0 ; i < 5 ; i ++)
         {
             nextlevel.get(0).add(new NormalEnemy());

@@ -18,12 +18,12 @@ public class Tower implements GameTile{
     private int price;
     private int time;
     private Bullet bullet = null;
-    private Image image2;
-    private Image image3;
-    private Image image4;
-    private ImageView imageView2 = new ImageView(image2);
-    private ImageView imageView3 = new ImageView(image3);
-    private ImageView imageView4 = new ImageView(image4);
+    private Image imageRange;
+    private Image imageBase;
+    private Image imageGun;
+    private ImageView imageViewRange = new ImageView(imageRange);
+    private ImageView imageViewBase = new ImageView(imageBase);
+    private ImageView imageViewGun = new ImageView(imageGun);
     private Rotate rotate = new Rotate();
     public Tower()
     {
@@ -31,39 +31,39 @@ public class Tower implements GameTile{
     }
     private void setImage()
     {
-        imageView4.getTransforms().add(rotate);
+        imageViewGun.getTransforms().add(rotate);
     }
 
     @Override
     public double getPosX() {
-        return imageView3.getLayoutX() + 10.5;
+        return imageViewBase.getLayoutX() + 15;
     }
 
     @Override
     public double getPosY() {
-        return imageView3.getLayoutY() + 10.5;
+        return imageViewBase.getLayoutY() + 15;
     }
 
     @Override
     public double getHeight() {
-        return 21 ;
+        return 30 ;
     }
 
     @Override
     public double getWidth() {
-        return 21;
+        return 30;
     }
-    public ImageView getImageView4()
+    public ImageView getImageViewGun()
     {
-        return imageView4;
+        return imageViewGun;
     }
 
-    public ImageView getImageView2() {
-        return imageView2;
+    public ImageView getImageViewRange() {
+        return imageViewRange;
     }
 
-    public ImageView getImageView3() {
-        return imageView3;
+    public ImageView getImageViewBase() {
+        return imageViewBase;
     }
 
     public double getDame() {
@@ -82,16 +82,16 @@ public class Tower implements GameTile{
         return price;
     }
 
-    public Image getImage2() {
-        return image2;
+    public Image getImageRange() {
+        return imageRange;
     }
 
-    public Image getImage3() {
-        return image3;
+    public Image getImageBase() {
+        return imageBase;
     }
 
-    public Image getImage4() {
-        return image4;
+    public Image getImageGun() {
+        return imageGun;
     }
 
     public void setDame(double dame) {
@@ -110,28 +110,28 @@ public class Tower implements GameTile{
         this.speed = speed;
     }
 
-    public void setImage2(Image image2) {
-        this.image2 = image2;
+    public void setImageRange(Image image2) {
+        this.imageRange = image2;
     }
 
-    public void setImage3(Image image3) {
-        this.image3 = image3;
+    public void setImageBase(Image imageBase) {
+        this.imageBase = imageBase;
     }
 
-    public void setImage4(Image image4) {
-        this.image4 = image4;
+    public void setImageGun(Image imageGun) {
+        this.imageGun = imageGun;
     }
 
-    public void setImageView2(ImageView imageView2) {
-        this.imageView2 = imageView2;
+    public void setImageViewRange(ImageView imageView2) {
+        this.imageViewRange = imageView2;
     }
 
-    public void setImageView3(ImageView imageView3) {
-        this.imageView3 = imageView3;
+    public void setImageViewBase(ImageView imageViewBase) {
+        this.imageViewBase = imageViewBase;
     }
 
-    public void setImageView4(ImageView imageView4) {
-        this.imageView4 = imageView4;
+    public void setImageViewGun(ImageView imageViewGun) {
+        this.imageViewGun = imageViewGun;
     }
 
     public int getTime() {
@@ -155,7 +155,7 @@ public class Tower implements GameTile{
             public void handle(long l) {
                 t[0] = t[0] + 1000;
                 if (t[0] >= 20000) {*/
-                    if (enemy.imageView.getBoundsInParent().intersects(getImageView2().getBoundsInParent())) {
+                    if (enemy.imageView.getBoundsInParent().intersects(getImageViewRange().getBoundsInParent())) {
                         if (pane.getChildren().contains(enemy.imageView)) {
                             double x1 = getPosX();
                             double y1 = getPosY();
@@ -340,8 +340,8 @@ public class Tower implements GameTile{
 
         alpha = alpha * 180 / Math.PI;
         if (x2 <= x1) alpha = 360 - alpha;
-        rotate.setPivotX(getPosX() - getImageView4().getLayoutX());
-        rotate.setPivotY(getPosY() - getImageView4().getLayoutY());
+        rotate.setPivotX(getPosX() - getImageViewGun().getLayoutX());
+        rotate.setPivotY(getPosY() - getImageViewGun().getLayoutY());
         rotate.setAngle(alpha);
     }
 }

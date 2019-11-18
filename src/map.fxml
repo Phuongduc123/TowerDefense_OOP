@@ -45,9 +45,9 @@
             <Image url="@AssetsKit_1/buttons/DefineButton2_71/1.png" />
          </image>
       </ImageView>
-      <Button fx:id="buttonNT" layoutX="993.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#taothap" opacity="0.0" prefHeight="66.0" prefWidth="94.0" text="Button" />
-      <Button fx:id="buttonST" layoutX="993.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#taothapST" opacity="0.0" prefHeight="66.0" prefWidth="94.0" text="Button" />
-      <Button fx:id="buttonMT" layoutX="1154.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#taothapMT" opacity="0.0" prefHeight="66.0" prefWidth="107.0" text="Button" />
+      <Button fx:id="buttonNT" layoutX="993.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#createNormalTower" opacity="0.0" prefHeight="66.0" prefWidth="94.0" text="Button" />
+      <Button fx:id="buttonST" layoutX="993.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#createSniperTower" opacity="0.0" prefHeight="66.0" prefWidth="94.0" text="Button" />
+      <Button fx:id="buttonMT" layoutX="1154.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#createMachineGunTower" opacity="0.0" prefHeight="66.0" prefWidth="107.0" text="Button" />
       <ImageView fitHeight="52.0" fitWidth="168.0" layoutX="1044.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@AssetsKit_1/buttons/DefineButton2_87/1.png" />
