@@ -219,7 +219,6 @@ public class Tower implements GameTile{
                                 pathTransition.play();
                                 pane.getChildren().add(bullet.imageView);
 
-
                                 //pane.getChildren().remove(normalBullet.imageView);
                                 Bullet finalBullet = bullet;
                                 AnimationTimer animationTimer3 = new AnimationTimer() {
@@ -232,9 +231,11 @@ public class Tower implements GameTile{
                                         if (finalBullet.imageView.getBoundsInParent().intersects(enemy.imageView.getBoundsInParent()) && pane.getChildren().contains(finalBullet.imageView)) {
                                             pane.getChildren().remove(finalBullet.imageView);
                                             enemy.setHP(enemy.hp - finalBullet.dame + enemy.armor);
+                                            //enemy.updateHealthBar();
                                             finalBullet.dame = 0;
                                             if (enemy.hp <= 0) {
                                                 pane.getChildren().remove(enemy.imageView);
+                                                pane.getChildren().remove(enemy.healthBar);
                                                 //Money = Money + enemy.getPhanthuong();
                                                 Money[0]= Money[0] + enemy.getReward();
                                                 enemy.setReward(0);

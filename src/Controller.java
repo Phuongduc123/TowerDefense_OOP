@@ -65,7 +65,7 @@ public class Controller {
     @FXML private Label healths  = new Label("25");
     @FXML private Label Moneylabel = new Label("Money: 70" );
 
-    private MusicGame musicGame = new MusicGame();
+    // private MusicGame musicGame = new MusicGame();
 
     final int []Money = {70};
     final int[] Live = {30};
@@ -227,7 +227,6 @@ public class Controller {
             pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
-                    MyPath myPath = new MyPath();
                     //boolean check = imageView1.getBoundsInParent().intersects(imageTest.getBoundsInParent());
                     Bounds objA = imageView1.localToScene(imageView1.getBoundsInLocal());
                     Bounds objB = imageTest.localToScene(imageTest.getBoundsInLocal());
@@ -418,6 +417,7 @@ public class Controller {
     public void nextLevel() {
         NormalEnemy normalEnemy = new NormalEnemy();
         pane.getChildren().add(normalEnemy.imageView);
+        pane.getChildren().add(normalEnemy.healthBar);
         normalEnemy.imageView.setLayoutX(0);
         normalEnemy.imageView.setLayoutY(0);
         Rotate rotate = new Rotate();
@@ -427,43 +427,7 @@ public class Controller {
         normalEnemy.imageView.getTransforms().add(rotate);
 
         MyPath myPath = new MyPath();
-        //Path path = new Path();
-        //PathTransition pathTransition = new PathTransition();
-        /*chay1(normalEnemy.imageView, path,480, 45, 335, 45);
-        chay1(normalEnemy.imageView, path,335, 80, 335, 125);
-        chay1(normalEnemy.imageView, path,320, 125, 207, 125);
-        chay1(normalEnemy.imageView, path,225, 110, 225, 45);
-        chay1(normalEnemy.imageView, path,210, 50, 51, 50);
-        chay1(normalEnemy.imageView, path,56, 70, 56, 225);
-        chay1(normalEnemy.imageView, path, 75, 220, 445, 220);
-        chay1(normalEnemy.imageView, path,440, 260, 440, 391);
-        chay1(normalEnemy.imageView, path,420, 380, 335, 380);
-        chay1(normalEnemy.imageView, path,345, 370, 345, 299);
-        chay1(normalEnemy.imageView, path,320, 304, 220, 304);
-        chay1(normalEnemy.imageView, path, 225, 330, 225, 390);
-        chay1(normalEnemy.imageView, path,205, 375, -30, 375);*/
-        /*MoveTo moveTo = new MoveTo(480, 45);
-        LineTo lineTo1 = new LineTo(335, 45);
-        LineTo lineTo2 = new LineTo(335, 125);
-        LineTo lineTo3 = new LineTo(225, 125);
-        LineTo lineTo4 = new LineTo(225, 48);
-        LineTo lineTo5 = new LineTo(55, 48);
-        LineTo lineTo6 = new LineTo(55, 220);
-        LineTo lineTo7 = new LineTo(435, 220);
-        LineTo lineTo8 = new LineTo(435, 380);
-        LineTo lineTo9 = new LineTo(345, 380);
-        LineTo lineTo10 = new LineTo(345, 305);
-        LineTo lineTo11 = new LineTo(225, 305);
-        LineTo lineTo12 = new LineTo(225, 380);
-        LineTo lineTo13 = new LineTo(-30, 380);
-        path.getElements().addAll(moveTo, lineTo1, lineTo2, lineTo3, lineTo4, lineTo5, lineTo6, lineTo7, lineTo8, lineTo9, lineTo10, lineTo11, lineTo12, lineTo13);*/
-        /*pathTransition.setNode(normalEnemy.imageView);
-        pathTransition.setDuration(Duration.millis(20000));
-        pathTransition.setPath();
-        pathTransition.setOrientation(PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
-        pathTransition.setCycleCount(0);
-        pathTransition.setAutoReverse(false);
-        pathTransition.play();*/
+
         Level++;
         final double[] t1 = {0};
         final int[] i1 = {0};
@@ -475,6 +439,9 @@ public class Controller {
                     pane.getChildren().add(nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).imageView);
                     nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).imageView.setLayoutX(0);
                     nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).imageView.setLayoutY(0);
+
+                    nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).updateHealthBar();
+
                     PathTransition pathTransition = new PathTransition();
                     pathTransition.setNode(nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).imageView);
                     pathTransition.setDuration(Duration.millis(nextLevelGame.getNextLevel().get(Level-1).get(i1[0]).speed));
@@ -483,9 +450,9 @@ public class Controller {
                     pathTransition.setCycleCount(0);
                     pathTransition.setAutoReverse(false);
                     pathTransition.play();
+
                     i1[0]++;
                 }
-
 
                 if (i1[0] == nextLevelGame.getNextLevel().get(Level - 1).size()) {
                     stop();

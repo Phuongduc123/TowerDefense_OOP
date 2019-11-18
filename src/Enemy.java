@@ -1,5 +1,8 @@
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.StrokeType;
 
 public class Enemy implements GameEntity {
     protected double hp;
@@ -8,6 +11,8 @@ public class Enemy implements GameEntity {
     protected int reward;
     protected Image image;
     protected ImageView imageView;
+    HealthBar healthBar;
+    double healthMax;
     public double getPosX() {
         return imageView.getTranslateX();
     }
@@ -50,4 +55,15 @@ public class Enemy implements GameEntity {
     public void setReward(int reward) {
         this.reward = reward;
     }
+
+    public double getRelativeHealth() {
+        return getHP() / healthMax;
+    }
+    public void updateHealthBar() {
+        healthBar.setValue(getRelativeHealth());
+        healthBar.relocate(this.getPosX() + (imageView.getBoundsInLocal().getWidth() - healthBar.getBoundsInLocal().getWidth()) / 2,
+                          this.getPosY() - healthBar.getBoundsInLocal().getHeight() - 4);
+        System.out.println(this.getPosX());
+    }
+
 }

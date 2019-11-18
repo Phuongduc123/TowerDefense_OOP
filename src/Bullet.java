@@ -9,7 +9,7 @@ public class Bullet implements GameEntity {
     protected double speed;
     protected double dame ;
     protected Image image ;
-    protected javafx.scene.image.ImageView imageView;
+    protected ImageView imageView;
     @Override
     public double getPosX() {
         return imageView.getTranslateX();
