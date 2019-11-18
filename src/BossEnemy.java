@@ -7,7 +7,7 @@ public class BossEnemy extends Enemy {
         imageView = new ImageView(image);
         imageView.setFitWidth(70);
         imageView.setPreserveRatio(true);
-        hp = 1000;
+        hp = 400;
         speed = 5000;
         armor = 50;
         reward = 50;

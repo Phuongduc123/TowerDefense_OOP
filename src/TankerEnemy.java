@@ -8,8 +8,8 @@ public class TankerEnemy extends Enemy  {
         imageView = new ImageView(image);
         imageView.setFitWidth(60);
         imageView.setPreserveRatio(true);
-        hp = 1000;
-        speed = 2000;
+        hp = 300;
+        speed = 20000;
         armor = 25;
         reward = 30;
     }

@@ -191,21 +191,10 @@ public class Tower implements GameTile{
                                     bullet = new MachineGunBullet();
                                     bullet.setDame(tower.getDame());
                                 }
-                                //NormalBullet normalBullet = new NormalBullet();
-                                //pane.getChildren().add(bullet.imageView);
-                                //normalBullet.imageView.setLayoutX(normalTowerArrayList.get(0).getPosX());
-                                //normalBullet.imageView.setLayoutY(normalTowerArrayList.get(0).getPosY() - 25);
-                                //normalBullet.imageView.getTransforms().add(rotate1);
+
                                 bullet.imageView.setLayoutX(-50);
                                 bullet.imageView.setLayoutY(-50);
-                                //bullet.imageView.setLayoutX(getPosX() + 25 * Math.sin(anpha * Math.PI / 180));
-                                //bullet.imageView.setLayoutY(getPosY() - 25 * Math.cos(anpha * Math.PI / 180));
-                                /*TranslateTransition translateTransition = new TranslateTransition();
-                                translateTransition.setDuration(Duration.millis(300));
-                                translateTransition.setNode(normalBullet.imageView);
-                                translateTransition.setToX((enemy.getPosX() - normalBullet.imageView.getLayoutX()) * 10);
-                                translateTransition.setToY((enemy.getPosY() - normalBullet.imageView.getLayoutY()) * 10);
-                                translateTransition.play();*/
+
                                 PathTransition pathTransition = new PathTransition();
                                 pathTransition.setDuration(Duration.millis(200));
                                 pathTransition.setNode(bullet.imageView);
@@ -231,7 +220,7 @@ public class Tower implements GameTile{
                                         if (finalBullet.imageView.getBoundsInParent().intersects(enemy.imageView.getBoundsInParent()) && pane.getChildren().contains(finalBullet.imageView)) {
                                             pane.getChildren().remove(finalBullet.imageView);
                                             enemy.setHP(enemy.hp - finalBullet.dame + enemy.armor);
-                                            //enemy.updateHealthBar();
+                                            enemy.updateHealthBar();
                                             finalBullet.dame = 0;
                                             if (enemy.hp <= 0) {
                                                 pane.getChildren().remove(enemy.imageView);

@@ -16,6 +16,7 @@ import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class Controller {
@@ -38,7 +39,15 @@ public class Controller {
     @FXML
     private ImageView imageVieweasy;
     @FXML
-    private ImageView imageTest;
+    private ImageView imageTest1;
+    @FXML
+    private ImageView imageTest2;
+    @FXML
+    private ImageView imageTest3;
+    @FXML
+    private ImageView imageTest4;
+    @FXML
+    private ImageView imageTest5;
     @FXML
     private AnchorPane paneE;
     @FXML
@@ -52,7 +61,7 @@ public class Controller {
     @FXML ImageView co;
 
     @FXML private Label Levellabel = new Label("Level");
-    @FXML private Label Levels = new Label("0/30");
+    @FXML private Label Levels = new Label("0/10");
     @FXML private Label Livelabel = new Label("Live: 30");
     @FXML private Label healths  = new Label("25");
     @FXML private Label Moneylabel = new Label("Money: 70" );
@@ -60,13 +69,13 @@ public class Controller {
     // private MusicGame musicGame = new MusicGame();
 
     final int []Money = {70};
-    final int[] Live = {30};
+    final int[] Live = {10};
     private ArrayList<Tower> normalTowerArrayList = new ArrayList<>();
-    int Level = 0;
+    int Level = 1;
     private AnimationTimer animationTimer = new AnimationTimer() {
         @Override
         public void handle(long l) {
-            for (int i = 0 ; i < normalTowerArrayList.size() ; i ++)
+            for (int i = 0; i < normalTowerArrayList.size(); i++)
             {
                 normalTowerArrayList.get(i).setTime(normalTowerArrayList.get(i).getTime() + 1);
                 for (int j = 0; j < nextLevelGame.getNextLevel().get(Level-1).size(); j++)
@@ -76,9 +85,7 @@ public class Controller {
                         normalTowerArrayList.get(i).onRotate(nextLevelGame.getNextLevel().get(Level - 1).get(j));
                         if (normalTowerArrayList.get(i).getTime() >= normalTowerArrayList.get(i).getSpeed()) {
                             normalTowerArrayList.get(i).fire(pane, nextLevelGame.getNextLevel().get(Level - 1).get(j), Money, Moneylabel);
-
                             normalTowerArrayList.get(i).setTime(0);
-
                         }
                         break;
                     }
@@ -88,9 +95,13 @@ public class Controller {
             {
                 if (pane.getChildren().contains(nextLevelGame.getNextLevel().get(Level-1).get(i).imageView) && !nextLevelGame.getNextLevel().get(Level - 1).get(i).imageView.getBoundsInParent().intersects(co.getBoundsInParent()))
                 {
-                    Live[0] -- ;
-                    Livelabel.setText("Live:" + Live[0]);
+                    Live[0]-- ;
+                    Livelabel.setText("Live: " + Live[0]);
                     pane.getChildren().remove(nextLevelGame.getNextLevel().get(Level-1).get(i).imageView);
+                }
+                if (Live[0] <= 0) {
+                    GameOver();
+                    break;
                 }
             }
         }
@@ -190,7 +201,7 @@ public class Controller {
                 public void handle(MouseEvent mouseEvent) {
                     //boolean check = imageView1.getBoundsInParent().intersects(imageTest.getBoundsInParent());
                     Bounds objA = imageView1.localToScene(imageView1.getBoundsInLocal());
-                    Bounds objB = imageTest.localToScene(imageTest.getBoundsInLocal());
+                    Bounds objB = imageTest3.localToScene(imageTest3.getBoundsInLocal());
 
                     boolean check = objA.intersects(objB);
 
@@ -369,7 +380,7 @@ public class Controller {
             @Override
             public void handle(long l) {
                 t1[0] = t1[0] + 1;
-                if (t1[0] >= 30) {
+                if (t1[0] >= 10) {
                     pane.getChildren().add(nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).imageView);
                     nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).imageView.setLayoutX(0);
                     nextLevelGame.getNextLevel().get(Level - 1).get(i1[0]).imageView.setLayoutY(0);
@@ -392,14 +403,14 @@ public class Controller {
                     stop();
 
                 }
-                if (t1[0] >= 30) t1[0] = 0;
+                if (t1[0] >= 10) t1[0] = 0;
 
             }
         };
         //System.out.println(normalTowerArrayList.size());
         animationTimer5.start();
         animationTimer.start();
-        Levels.setText(Level + "/30");
+        Levels.setText(Level + "/10");
 
         //final int []i2 = {0};
         /*for ( int i = 0 ;i < normalTowerArrayList.size(); i ++)
@@ -609,4 +620,40 @@ public class Controller {
         AudioClip note = new AudioClip(this.getClass().getResource(("8_music.mp3")).toString());
         note.play();
     }
+    public void GameOver() {
+        Image imageGO = new Image("AssetsKit_1/shapes/Test/GO.png");
+        ImageView imageViewGO = new ImageView(imageGO);
+        imageViewGO.setFitWidth(1280);
+        imageViewGO.setFitHeight(720);
+        pane.getChildren().add(imageViewGO);
+    }
+
+    public void Win() {
+        Image imageGO = new Image("AssetsKit_1/shapes/Test/win.png");
+        ImageView imageViewWin = new ImageView(imageGO);
+        imageViewWin.setFitWidth(1280);
+        imageViewWin.setFitHeight(720);
+        pane.getChildren().add(imageViewWin);
+    }
+    /*
+    boolean check(ImageView imageView) {
+        ArrayList<ImageView> road = new ArrayList<>();
+
+        road.add(imageTest1);
+        road.add(imageTest2);
+        road.add(imageTest3);
+        road.add(imageTest4);
+        road.add(imageTest5);
+
+        for ( int i = 0 ; i < road.size(); i ++ )
+        {
+            Bounds objA = imageView1.localToScene(imageView1.getBoundsInLocal());
+            Bounds objB = imageTest3.localToScene(imageTest3.getBoundsInLocal());
+
+            boolean check = objA.intersects(objB);
+            if (imageView.getBoundsInParent().intersects(road.get(i).getBoundsInParent())) return false;
+        }
+        return true;
+    }
+    */
 }

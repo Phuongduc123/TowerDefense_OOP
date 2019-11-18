@@ -14,7 +14,7 @@ public class NormalEnemy extends Enemy {
         armor = 10;
         reward = 10;
         healthMax = 80;
-        healthBar = new HealthBar();
+        healthBar = new HealthBar(this);
 
     }
 

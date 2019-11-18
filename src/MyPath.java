@@ -13,7 +13,7 @@ public class MyPath extends Path{
         LineTo lineTo2 = new LineTo(410, 440);
         LineTo lineTo3 = new LineTo(750, 440);
         LineTo lineTo4 = new LineTo(750, 220);
-        LineTo lineTo5 = new LineTo(1300, 220);
+        LineTo lineTo5 = new LineTo(1400, 220);
         path.getElements().addAll(moveTo, lineTo1, lineTo2, lineTo3, lineTo4, lineTo5);
     }
 

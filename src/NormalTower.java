@@ -24,10 +24,10 @@ public class NormalTower extends Tower {
         getImageViewRange().setFitWidth(140);
         getImageViewRange().setFitHeight(140);
         setSpeed(20);
-        setShootingRange(70);
-        setPrice(20);
+        setShootingRange(700);
+        setPrice(2);
         getImageViewGun().getTransforms().add(getRotate());
-        setDame(35);
+        setDame(500);
         getImageViewGun().setOnMouseEntered(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {

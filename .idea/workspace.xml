@@ -1,36 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Tạm thời tắt nhạc, đổi hình ảnh, thêm healthbar.">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Edit Enemy, Tower">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/AssetsKit_1/shapes/BG.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/AssetsKit_1/shapes/BG.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/BossEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/BossEnemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$5$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$7$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/MachineGunTower$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/MachineGunTower$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/MachineGunTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/MachineGunTower.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/MyPath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/MyPath.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NextLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NextLevel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalEnemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SmallerEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SmallerEnemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SniperTower$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SniperTower$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SniperTower$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SniperTower$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SniperTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SniperTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/TankerEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/TankerEnemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Tower$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Tower$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Tower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Tower.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/map.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BossEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BossEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MachineGunTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MachineGunTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HealthBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyPath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NextLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NextLevel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NormalEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NormalEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NormalTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NormalTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SmallerEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmallerEnemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SniperTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SniperTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Road.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Road.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TankerEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TankerEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/map.fxml" afterDir="false" />
@@ -299,7 +307,7 @@
       <workItem from="1573669082606" duration="32908000" />
       <workItem from="1573832916453" duration="9878000" />
       <workItem from="1573963791770" duration="1548000" />
-      <workItem from="1574006349675" duration="21050000" />
+      <workItem from="1574006349675" duration="29421000" />
     </task>
     <task id="LOCAL-00001" summary="tạo thư mục MusicGame ở cùng vị trí với src và để file nhạc tại đó">
       <created>1573877960926</created>
@@ -315,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574035817884</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Edit Enemy, Tower">
+      <created>1574042785807</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574042785807</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +359,7 @@
     </ignored-roots>
     <MESSAGE value="tạo thư mục MusicGame ở cùng vị trí với src và để file nhạc tại đó" />
     <MESSAGE value="Tạm thời tắt nhạc, đổi hình ảnh, thêm healthbar." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tạm thời tắt nhạc, đổi hình ảnh, thêm healthbar." />
+    <MESSAGE value="Edit Enemy, Tower" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Enemy, Tower" />
   </component>
 </project>

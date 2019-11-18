@@ -7,49 +7,24 @@ import java.util.Collection;
 
 public class Road implements GameTile {
     @FXML
-    static ImageView imageTest;
+    static ImageView imageTest1;
     @FXML
-    static ImageView imageView2;
+    static ImageView imageTest2;
     @FXML
-    static ImageView imageView3;
+    static ImageView imageTest3;
     @FXML
-    static ImageView imageView4;
+    static ImageView imageTest4;
     @FXML
-    static ImageView imageView5;
-    @FXML
-    static ImageView imageView6;
-    @FXML
-    static ImageView imageView7;
-    @FXML
-    static ImageView imageView8;
-    @FXML
-    static ImageView imageView9;
-    @FXML
-    static ImageView imageView10;
-    @FXML
-    static ImageView imageView11;
-    @FXML
-    static ImageView imageView12;
-    @FXML
-    static ImageView imageView13;
-    static ArrayList<javafx.scene.image.ImageView> road = new ArrayList<>();
+    static ImageView imageTest5;
+
+    static ArrayList<ImageView> road = new ArrayList<>();
     public static boolean check(ImageView imageView)
     {
-        road.add(imageTest);
-        road.add(imageView2);
-        road.add(imageView3);
-        road.add(imageView4);
-        road.add(imageView5);
-        /*
-        road.add(imageView6);
-        road.add(imageView7);
-        road.add(imageView8);
-        road.add(imageView9);
-        road.add(imageView10);
-        road.add(imageView11);
-        road.add(imageView12);
-        road.add(imageView13);
-        */
+        road.add(imageTest1);
+        road.add(imageTest2);
+        road.add(imageTest3);
+        road.add(imageTest4);
+        road.add(imageTest5);
 
         for ( int i = 0 ; i < road.size(); i ++ )
         {
