@@ -23,7 +23,7 @@ public class NormalTower extends Tower {
         getImageViewBase().setFitHeight(30);
         getImageViewRange().setFitWidth(140);
         getImageViewRange().setFitHeight(140);
-        setSpeed(20);
+        setSpeed(15);
         setShootingRange(700);
         setPrice(2);
         getImageViewGun().getTransforms().add(getRotate());

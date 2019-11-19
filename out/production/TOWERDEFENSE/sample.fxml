@@ -17,6 +17,6 @@
             <Image url="@AssetsKit_1/shapes/BG.png" />
          </image>
       </ImageView>
-      <Button fx:id="button" layoutX="494.0" layoutY="547.0" mnemonicParsing="false" onAction="#setButtonPlay" opacity="0.0" prefHeight="76.0" prefWidth="278.0" text="Button" />
+      <Button fx:id="button" layoutX="501.0" layoutY="547.0" mnemonicParsing="false" onAction="#setButtonPlay" opacity="0.0" prefHeight="76.0" prefWidth="278.0" text="Button" />
    </children>
 </AnchorPane>

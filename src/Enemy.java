@@ -24,12 +24,12 @@ public class Enemy implements GameEntity {
 
     @Override
     public double getHeight() {
-        return 0 ;
+        return imageView.getFitHeight();
     }
 
     @Override
     public double getWidth() {
-        return 0;
+        return imageView.getFitWidth();
     }
 
     public double getHP() {

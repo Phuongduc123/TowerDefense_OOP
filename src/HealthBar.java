@@ -6,14 +6,13 @@ import javafx.scene.shape.StrokeType;
 public class HealthBar extends Pane {
     Rectangle outerHealthRect;
     Rectangle innerHealthRect;
-    final Enemy enemy;
+    //final Enemy enemy;
 
     public HealthBar(Enemy e) {
         double height = 10;
 
         double outerWidth = 60;
         double innerWidth = 40;
-        enemy = e;
         //double x = 100.0;
         //double y = 100.0;
 

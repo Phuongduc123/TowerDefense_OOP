@@ -11,10 +11,10 @@ public class NormalBullet extends Bullet {
         dame = 35;
         range = 70;
         speed = 400;
-        image = new Image("AssetsKit_1/shapes/137.png");
+        image = new Image("AssetsKit_1/shapes/Tower/nBullet.png");
         imageView = new ImageView(image);
-        imageView.setFitHeight(4.5);
-        imageView.setFitWidth(4.5);
+        imageView.setFitHeight(20);
+        imageView.setFitWidth(20);
     }
     public double getHeight() {
         return imageView.getFitHeight();

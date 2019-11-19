@@ -10,7 +10,7 @@ public class NormalEnemy extends Enemy {
         imageView.setFitWidth(50);
         imageView.setPreserveRatio(true);
         hp = 100;
-        speed = 10000;
+        speed = 15000;
         armor = 10;
         reward = 10;
         healthMax = 80;
