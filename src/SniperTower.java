@@ -17,16 +17,16 @@ public class SniperTower extends Tower {
         setImageViewGun(new ImageView(getImageGun()));
 
         getImageViewGun().setFitWidth(25);
-        getImageViewGun().setFitHeight(40);
-        getImageViewBase().setFitWidth(30);
-        getImageViewBase().setFitHeight(30);
+        getImageViewGun().setFitHeight(65);
+        getImageViewBase().setFitWidth(36);
+        getImageViewBase().setFitHeight(43);
         getImageViewRange().setFitWidth(200);
         getImageViewRange().setFitHeight(200);
-        setSpeed(40);
-        setShootingRange(100);
+        setSpeed(10);
+        setShootingRange(1500);
         setPrice(30);
         getImageViewGun().getTransforms().add(getRotate());
-        setDame(55);
+        setDame(150);
         getImageViewGun().setOnMouseEntered(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -42,22 +42,22 @@ public class SniperTower extends Tower {
     }
     @Override
     public double getPosX() {
-        return getImageViewBase().getLayoutX() + 15;
+        return getImageViewBase().getLayoutX() + 18;
     }
 
     @Override
     public double getPosY() {
-        return getImageViewBase().getLayoutY() + 15;
+        return getImageViewBase().getLayoutY() + 21;
     }
 
     @Override
     public double getHeight() {
-        return 30 ;
+        return 36;
     }
 
     @Override
     public double getWidth() {
-        return 30;
+        return 43;
     }
     public ImageView getImageViewGun()
     {

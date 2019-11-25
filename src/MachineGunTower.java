@@ -19,16 +19,16 @@ public class MachineGunTower extends Tower {
         setImageViewGun( new ImageView(getImageGun()));
 
         getImageViewGun().setFitWidth(25);
-        getImageViewGun().setFitHeight(40);
-        getImageViewBase().setFitWidth(30);
-        getImageViewBase().setFitHeight(30);
+        getImageViewGun().setFitHeight(65);
+        getImageViewBase().setFitWidth(36);
+        getImageViewBase().setFitHeight(43);
         getImageViewRange().setFitWidth(100);
         getImageViewRange().setFitHeight(100);
-        setSpeed(15);
-        setShootingRange(50);
+        setSpeed(20);
+        setShootingRange(1000);
         setPrice(40);
         getImageViewGun().getTransforms().add(getRotate());
-        setDame(15);
+        setDame(100);
         getImageViewGun().setOnMouseEntered(mouseEvent -> getImageViewRange().setOpacity(1));
         getImageViewGun().setOnMouseExited(new EventHandler<MouseEvent>() {
             @Override
@@ -42,22 +42,22 @@ public class MachineGunTower extends Tower {
 
     @Override
     public double getPosX() {
-        return getImageViewBase().getLayoutX() + 15;
+        return getImageViewBase().getLayoutX() + 18;
     }
 
     @Override
     public double getPosY() {
-        return getImageViewBase().getLayoutY() + 15;
+        return getImageViewBase().getLayoutY() + 21;
     }
 
     @Override
     public double getHeight() {
-        return 30;
+        return 36;
     }
 
     @Override
     public double getWidth() {
-        return 30;
+        return 43;
     }
     public ImageView getImageViewGun()
     {

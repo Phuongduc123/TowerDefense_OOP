@@ -8,9 +8,9 @@ public class BossEnemy extends Enemy {
         imageView.setFitWidth(70);
         imageView.setPreserveRatio(true);
         hp = 400;
-        speed = 5000;
+        speed = 15000;
         armor = 50;
-        reward = 50;
+        reward = 500;
     }
 
     @Override

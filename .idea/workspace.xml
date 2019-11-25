@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="test update">
-      <change afterPath="$PROJECT_DIR$/src/MusicGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MusicGame/8_music.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MusicGame/check.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MusicGame/sound.mp3" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="more update">
+      <change afterPath="$PROJECT_DIR$/Top-Level Package.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AssetsKit_1/shapes/pause.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AssetsKit_1/shapes/playMusic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AssetsKit_1/shapes/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AssetsKit_1/shapes/stopMusic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicGame/Gun1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicGame/soundLose.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicGame/soundWin.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/AssetsKit_1/shapes/Tower/mg.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/AssetsKit_1/shapes/Tower/mg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/AssetsKit_1/shapes/Tower/mgB.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/AssetsKit_1/shapes/Tower/mgB.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/AssetsKit_1/shapes/boss.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/AssetsKit_1/shapes/boss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/BossEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/BossEnemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$3.class" afterDir="false" />
@@ -18,18 +26,41 @@
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/model/MusicGame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AssetsKit_1/shapes/Tower/mg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/AssetsKit_1/shapes/Tower/mg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AssetsKit_1/shapes/Tower/mgB.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/AssetsKit_1/shapes/Tower/mgB.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/MachineGunBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/MachineGunBullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/MachineGunTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/MachineGunTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NextLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NextLevel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalBullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalEnemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/NormalTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SmallerEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SmallerEnemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SniperBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SniperBullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SniperTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/SniperTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/TankerEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/TankerEnemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Tower$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Tower$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Tower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/Tower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TOWERDEFENSE/map.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/model/Buttoningame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TOWERDEFENSE/model/resources/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AssetsKit_1/shapes/boss.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/AssetsKit_1/shapes/boss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BossEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BossEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MachineGunBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MachineGunBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MachineGunTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MachineGunTower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NextLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NextLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NormalBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NormalBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NormalEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NormalEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NormalTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NormalTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SmallerEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmallerEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SniperBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SniperBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SniperTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SniperTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TankerEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TankerEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/map.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MusicGame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Buttoningame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/resources/1.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +155,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="E:/Tower-Defense" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="H:/Tower Defence_thanh" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -309,7 +341,10 @@
       <workItem from="1574346049717" duration="5330000" />
       <workItem from="1574516332926" duration="1878000" />
       <workItem from="1574607206828" duration="4450000" />
-      <workItem from="1574649923487" duration="4967000" />
+      <workItem from="1574649923487" duration="5062000" />
+      <workItem from="1574657811690" duration="3758000" />
+      <workItem from="1574662172369" duration="6126000" />
+      <workItem from="1574668790669" duration="6440000" />
     </task>
     <task id="LOCAL-00001" summary="tạo thư mục MusicGame ở cùng vị trí với src và để file nhạc tại đó">
       <created>1573877960926</created>
@@ -346,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574054705061</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="more update">
+      <created>1574656084870</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574656084870</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,6 +420,7 @@
     <MESSAGE value="Tạm thời tắt nhạc, đổi hình ảnh, thêm healthbar." />
     <MESSAGE value="Edit Enemy, Tower" />
     <MESSAGE value="test update" />
-    <option name="LAST_COMMIT_MESSAGE" value="test update" />
+    <MESSAGE value="more update" />
+    <option name="LAST_COMMIT_MESSAGE" value="more update" />
   </component>
 </project>

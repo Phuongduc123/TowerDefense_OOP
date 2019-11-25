@@ -9,8 +9,8 @@ public class SmallerEnemy extends Enemy {
         imageView.setFitWidth(30);
         imageView.setPreserveRatio(true);
         hp = 50;
-        speed = 15000;
-        armor = 2;
+        speed = 10000;
+        armor = 20;
         reward = 5;
     }
 

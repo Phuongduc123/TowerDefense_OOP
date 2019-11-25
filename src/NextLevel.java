@@ -10,8 +10,13 @@ public class NextLevel {
         for (int i = 0 ; i < 5; i++)
         {
             nextLevel.get(0).add(new NormalEnemy());
+
         }
+        /*
+        nextLevel.get(0).add(new SmallerEnemy());
+        nextLevel.get(0).add(new BossEnemy());
         nextLevel.get(0).add(new TankerEnemy());
+        */
         for (int i = 0; i < 10; i++)
         {
             nextLevel.get(1).add(new NormalEnemy());

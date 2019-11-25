@@ -6,11 +6,11 @@ public class TankerEnemy extends Enemy  {
     {
         image = new Image("AssetsKit_1/shapes/te.png");
         imageView = new ImageView(image);
-        imageView.setFitWidth(60);
+        imageView.setFitWidth(70);
         imageView.setPreserveRatio(true);
         hp = 300;
         speed = 20000;
-        armor = 25;
+        armor = 200;
         reward = 30;
     }
 

@@ -17,18 +17,18 @@ public class NormalTower extends Tower {
         setImageViewBase(new ImageView(getImageBase()));
         setImageViewGun( new ImageView(getImageGun()));
 
-        getImageViewGun().setFitWidth(38);
-        getImageViewGun().setFitHeight(97);
+        getImageViewGun().setFitWidth(25);
+        getImageViewGun().setFitHeight(65);
         getImageViewBase().setFitWidth(36);
         getImageViewBase().setFitHeight(43);
         getImageViewRange().setFitWidth(140);
         getImageViewRange().setFitHeight(140);
 
         setSpeed(15);
-        setShootingRange(700);
-        setPrice(2);
+        setShootingRange(1000);
+        setPrice(20);
         getImageViewGun().getTransforms().add(getRotate());
-        setDame(500);
+        setDame(120);
         getImageViewGun().setOnMouseEntered(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {

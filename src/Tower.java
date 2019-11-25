@@ -4,11 +4,15 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.shape.LineTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
+
+import java.io.File;
 
 public class Tower implements GameTile{
     private double speed;
@@ -110,8 +114,8 @@ public class Tower implements GameTile{
         this.speed = speed;
     }
 
-    public void setImageRange(Image image2) {
-        this.imageRange = image2;
+    public void setImageRange(Image imageRange) {
+        this.imageRange = imageRange;
     }
 
     public void setImageBase(Image imageBase) {
@@ -168,15 +172,10 @@ public class Tower implements GameTile{
                                 double vy = y2 - y1;
                                 double anpha = 0;
                                 anpha = (vx * 0 + vy * -1) / (Math.sqrt(vx * vx + vy * vy));
-                                //System.out.println(anpha);
                                 anpha = Math.acos(anpha);
 
                                 anpha = anpha * 180 / Math.PI;
-                                //System.out.println(anpha);
                                 if (x2 <= x1) anpha = 360 - anpha;
-                                //if (x2 <= x1 && y2 >= y1) anpha = 180 + anpha;
-                                //System.out.println(anpha);
-                                //Bullet bullet = null;
                                 if (tower instanceof NormalTower)
                                 {
                                     bullet = new NormalBullet();
@@ -223,6 +222,11 @@ public class Tower implements GameTile{
                                             //enemy.updateHealthBar();
                                             finalBullet.dame = 0;
                                             if (enemy.hp <= 0) {
+                                                String src = "src/MusicGame/gun1.mp3";
+                                                Media soundLose = new Media(new File(src).toURI().toString());
+                                                MediaPlayer mediaPlayer = new MediaPlayer(soundLose);
+                                                mediaPlayer.play();
+
                                                 pane.getChildren().remove(enemy.imageView);
                                                 pane.getChildren().remove(enemy.healthBar);
                                                 //Money = Money + enemy.getPhanthuong();
@@ -242,78 +246,9 @@ public class Tower implements GameTile{
                                 };
 
                                 animationTimer3.start();
-                                //System.out.println(money2[0]);
-                                //
-                                //Moneylabel.setText("Monel: " + Money);
-
-
-                                // if ( !(normalBullet.imageView.getBoundsInParent().intersects(normalTowerArrayList.get(0).getImageView2().getBoundsInParent())))
-                                // {
-                                //   pane.getChildren().remove(normalBullet.imageView);
-                                // }
-                                //Rotate rotate2 = new Rotate();
-                                //rotate2.setAngle(360-anpha);
-                                //rotate2.setPivotX(normalTowerArrayList.get(0).getPosX()-normalTowerArrayList.get(0).getImageView4().getLayoutX());
-                                //rotate2.setPivotY(normalTowerArrayList.get(0).getPosY() - normalTowerArrayList.get(0).getImageView4().getLayoutY());
-                                //normalTowerArrayList.get(0).getImageView4().getTransforms().add(rotate2);
-                                /*final double[] t = {0};
-                                final double[] finalAnpha = {anpha};
-                                AnimationTimer animationTimer4 = new AnimationTimer() {
-                                    @Override
-                                    public void handle(long l) {
-                                        t[0] = t[0] + 1;
-                                        if (t[0] >= 10) {
-                                            Rotate rotate2 = new Rotate();
-                                            rotate2.setAngle(360 - finalAnpha[0]);
-                                            rotate2.setPivotX(getPosX() - getImageView4().getLayoutX());
-                                            rotate2.setPivotY(getPosY() - getImageView4().getLayoutY());
-                                            getImageView4().getTransforms().add(rotate2);
-                                            finalAnpha[0] = 0.0;
-                                            stop();
-                                        }
-                                    }
-                                };
-                                //animationTimer4.start();*/
-
                             }
-
                         }
                     }
-        //Bullet finalBullet = bullet;
-        //AnimationTimer animationTimer3 = new AnimationTimer() {
-        //@Override
-        //public void handle(long l) {
-        /*double x = finalBullet.imageView.getTranslateX() + finalBullet.imageView.getLayoutX();
-        double y = finalBullet.imageView.getTranslateY() + finalBullet.imageView.getLayoutY();
-        double s2 = (x - getPosX()) * (x - getPosX()) + (y - getPosY()) * (y - getPosY());
-        s2 = Math.sqrt(s2);
-        if (finalBullet.imageView.getBoundsInParent().intersects(enemy.imageView.getBoundsInParent()) && pane.getChildren().contains(finalBullet.imageView)) {
-            pane.getChildren().remove(finalBullet.imageView);
-            enemy.setHp(enemy.hp - finalBullet.dame + enemy.armor);
-            finalBullet.dame = 0;
-            //stop();
-        }
-        if (s2 >= finalBullet.tambay) {
-            pane.getChildren().remove(finalBullet.imageView);
-            //stop();
-        }
-
-        if (enemy.hp <= 0) {
-            pane.getChildren().remove(enemy.imageView);
-        }
-                    /*if (t[0] >= 20000) t[0] = 0;
-
-
-                }
-                if ( enemy.imageView.getBoundsInParent().intersects(getImageView2().getBoundsInParent()) && ! (pane.getChildren().contains(enemy.imageView))) stop();
-                //if ( !enemy.imageView.getBoundsInParent().intersects(getImageView2().getBoundsInParent())) stop();
-
-
-            }
-
-
-        };
-        animationTimer2.start();*/
     }
     public void onRotate(Enemy enemy)
     {
