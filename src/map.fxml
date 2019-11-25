@@ -50,51 +50,30 @@
             <Image url="@AssetsKit_1/shapes/209.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="77.0" fitWidth="94.0" layoutX="993.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="86.0" fitWidth="53.0" layoutX="1022.0" layoutY="34.0" pickOnBounds="true">
          <image>
-            <Image url="@AssetsKit_1/buttons/DefineButton2_80/1.png" />
+            <Image url="@AssetsKit_1/shapes/Tower/n.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="97.0" fitWidth="94.0" layoutX="993.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="97.0" fitWidth="67.0" layoutX="1085.0" layoutY="146.0" pickOnBounds="true">
          <image>
-            <Image url="@AssetsKit_1/buttons/DefineButton2_77/1.png" />
+            <Image url="@AssetsKit_1/shapes/Tower/s.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="81.0" fitWidth="107.0" layoutX="1154.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="81.0" fitWidth="67.0" layoutX="1154.0" layoutY="35.0" pickOnBounds="true">
          <image>
-            <Image url="@AssetsKit_1/buttons/DefineButton2_71/1.png" />
+            <Image url="@AssetsKit_1/shapes/Tower/mg.png" />
          </image>
       </ImageView>
-      <Button fx:id="buttonNT" layoutX="993.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#createNormalTower" opacity="0.0" prefHeight="66.0" prefWidth="94.0" text="Button" />
-      <Button fx:id="buttonST" layoutX="993.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#createSniperTower" opacity="0.0" prefHeight="66.0" prefWidth="94.0" text="Button" />
-      <Button fx:id="buttonMT" layoutX="1154.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#createMachineGunTower" opacity="0.0" prefHeight="66.0" prefWidth="107.0" text="Button" />
+      <Button fx:id="buttonNT" layoutX="1017.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#createNormalTower" opacity="0.0" prefHeight="86.0" prefWidth="67.0" text="Button" />
+      <Button fx:id="buttonST" layoutX="1081.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#createSniperTower" opacity="0.0" prefHeight="97.0" prefWidth="78.0" text="Button" />
+      <Button fx:id="buttonMT" layoutX="1155.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#createMachineGunTower" opacity="0.0" prefHeight="86.0" prefWidth="67.0" text="Button" />
       <ImageView fitHeight="52.0" fitWidth="168.0" layoutX="1037.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@AssetsKit_1/buttons/DefineButton2_87/1.png" />
          </image>
       </ImageView>
-      <Button fx:id="nextLevel" layoutX="1037.0" layoutY="315.0" mnemonicParsing="false" onAction="#nextLevel" opacity="0.0" prefHeight="52.0" prefWidth="163.0" text="Button" />
-      <Label layoutX="1061.0" layoutY="390.0" prefHeight="37.0" prefWidth="116.0" text=" Next wave">
-         <font>
-            <Font name=".VnBahamasB Bold" size="19.0" />
-         </font></Label>
-      <Label layoutX="1009.0" layoutY="448.0" prefHeight="37.0" prefWidth="78.0" text="Health" textFill="#e80202">
-         <font>
-            <Font name=".TMC-Ong Do" size="25.0" />
-         </font></Label>
-      <Label layoutX="1061.0" layoutY="544.0" prefHeight="37.0" prefWidth="116.0" text="Type : group" textFill="#3600e8">
-         <font>
-            <Font name=".VnBahamasBH Bold" size="18.0" />
-         </font></Label>
-      <Label fx:id="healths" layoutX="1169.0" layoutY="448.0" prefHeight="37.0" prefWidth="78.0" text="25" textFill="#ff0505">
-         <font>
-            <Font size="26.0" />
-         </font></Label>
-      <ImageView fitHeight="52.0" fitWidth="200.0" layoutX="1026.0" layoutY="621.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@AssetsKit_1/buttons/DefineButton2_83/1.png" />
-         </image>
-      </ImageView>
+      <Button fx:id="nextLevel" layoutX="1038.0" layoutY="315.0" mnemonicParsing="false" onAction="#nextLevel" opacity="0.0" prefHeight="52.0" prefWidth="163.0" text="Button" textAlignment="CENTER" />
       <Label fx:id="Levellabel" layoutX="129.0" layoutY="669.0" text="Level">
          <font>
             <Font name="Berlin Sans FB" size="30.0" />
@@ -111,6 +90,5 @@
          <font>
             <Font name="Berlin Sans FB" size="30.0" />
          </font></Label>
-      <Button layoutX="1026.0" layoutY="621.0" mnemonicParsing="false" opacity="0.0" prefHeight="52.0" prefWidth="185.0" text="Button" />
    </children>
 </AnchorPane>

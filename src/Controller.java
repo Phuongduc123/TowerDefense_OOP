@@ -12,11 +12,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.AudioClip;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.InputStream;
+import java.io.File;
 import java.util.ArrayList;
 
 public class Controller {
@@ -62,11 +64,16 @@ public class Controller {
 
     @FXML private Label Levellabel = new Label("Level");
     @FXML private Label Levels = new Label("0/10");
-    @FXML private Label Livelabel = new Label("Live: 30");
+    @FXML private Label Livelabel = new Label("Live: 10");
     @FXML private Label healths  = new Label("25");
     @FXML private Label Moneylabel = new Label("Money: 70" );
 
-    // private model.MusicGame musicGame = new model.MusicGame();
+    String src = "MusicGame/sound.mp3";
+
+    Media media = new Media(new File(src).toURI().toString());
+    MediaPlayer mediaPlayer = new MediaPlayer(media);
+
+    boolean isPlayed = false;
 
     final int []Money = {70};
     final int[] Live = {10};
@@ -121,8 +128,9 @@ public class Controller {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        //paneE.setOpacity(0);
 
+        isPlayed = true;
+        //paneE.setOpacity(0);
 
     }
 
@@ -165,11 +173,11 @@ public class Controller {
         if (Money[0] >= normalTower.getPrice()) {
 
             ImageView imageViewBase = new ImageView(normalTower.getImageViewBase().getImage());
-            imageViewBase.setFitHeight(21);
-            imageViewBase.setFitWidth(21);
+            imageViewBase.setFitWidth(36);
+            imageViewBase.setFitHeight(43);
             ImageView imageViewGun = new ImageView(normalTower.getImageViewGun().getImage());
-            imageViewGun.setFitWidth(18);
-            imageViewGun.setFitHeight(25);
+            imageViewGun.setFitWidth(38);
+            imageViewGun.setFitHeight(97);
             ImageView imageViewRange = new ImageView(normalTower.getImageViewRange().getImage());
             imageViewRange.setFitWidth(140);
             imageViewRange.setFitHeight(140);
@@ -191,11 +199,11 @@ public class Controller {
                     imageViewRange.setLayoutX(mouseEvent.getSceneX() - 70);
                     imageViewRange.setLayoutY(mouseEvent.getSceneY() - 70);
 
-                    imageViewBase.setLayoutX(mouseEvent.getSceneX() - 10.5);
-                    imageViewBase.setLayoutY(mouseEvent.getSceneY() - 10.5);
+                    imageViewBase.setLayoutX(mouseEvent.getSceneX());
+                    imageViewBase.setLayoutY(mouseEvent.getSceneY());
 
-                    imageViewGun.setLayoutX(mouseEvent.getSceneX() - 9);
-                    imageViewGun.setLayoutY(mouseEvent.getSceneY() - 16.5);
+                    imageViewGun.setLayoutX(mouseEvent.getSceneX() - 19);
+                    imageViewGun.setLayoutY(mouseEvent.getSceneY() - 48.5);
 
                 }
             });
@@ -210,14 +218,14 @@ public class Controller {
 
                     boolean check = objA.intersects(objB);
                     */
-                    if (check(imageViewBase)) {
+                    if (checkLocationCanCreate(imageViewBase)) {
                         pane.getChildren().addAll(normalTower.getImageViewBase(), normalTower.getImageViewRange(), normalTower.getImageViewGun());
                         normalTower.getImageViewRange().setLayoutX(mouseEvent.getSceneX() - 70);
                         normalTower.getImageViewRange().setLayoutY(mouseEvent.getSceneY() - 70);
-                        normalTower.getImageViewBase().setLayoutX(mouseEvent.getSceneX() - 10.5);
-                        normalTower.getImageViewBase().setLayoutY(mouseEvent.getSceneY() - 10.5);
-                        normalTower.getImageViewGun().setLayoutX(mouseEvent.getSceneX() - 9);
-                        normalTower.getImageViewGun().setLayoutY(mouseEvent.getSceneY() - 16.5);
+                        normalTower.getImageViewBase().setLayoutX(mouseEvent.getSceneX() - 18);
+                        normalTower.getImageViewBase().setLayoutY(mouseEvent.getSceneY() - 36);
+                        normalTower.getImageViewGun().setLayoutX(mouseEvent.getSceneX() - 19);
+                        normalTower.getImageViewGun().setLayoutY(mouseEvent.getSceneY() - 48.5);
                         normalTower.getImageViewRange().setOpacity(0);
                         pane.getChildren().removeAll(imageViewBase, imageViewGun, imageViewRange);
                     }
@@ -269,7 +277,7 @@ public class Controller {
             pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
-                    if (check(imageView1)) {
+                    if (checkLocationCanCreate(imageView1)) {
                         pane.getChildren().addAll(sniperTower.getImageViewBase(), sniperTower.getImageViewRange(), sniperTower.getImageViewGun());
                         sniperTower.getImageViewRange().setLayoutX(mouseEvent.getSceneX() - 100);
                         sniperTower.getImageViewRange().setLayoutY(mouseEvent.getSceneY() - 100);
@@ -331,7 +339,7 @@ public class Controller {
             pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
-                    if (check(imageView1)) {
+                    if (checkLocationCanCreate(imageView1)) {
                         pane.getChildren().addAll(machineGunTower.getImageViewBase(), machineGunTower.getImageViewRange(), machineGunTower.getImageViewGun());
                         machineGunTower.getImageViewRange().setLayoutX(mouseEvent.getSceneX() - 50);
                         machineGunTower.getImageViewRange().setLayoutY(mouseEvent.getSceneY() - 50);
@@ -608,10 +616,19 @@ public class Controller {
     {
     }
 
-    private void playAudio() {
-        AudioClip note = new AudioClip(this.getClass().getResource(("8_music.mp3")).toString());
-        note.play();
+    @FXML
+    private void playSound() {
+        mediaPlayer.play();
+        if (isPlayed) {
+            stopSound();
+        }
+        //mediaPlayer.setAutoPlay(true);
     }
+    @FXML
+    private void stopSound() {
+        mediaPlayer.stop();
+    }
+
     public void GameOver() {
         Image imageGO = new Image("AssetsKit_1/shapes/Test/GO.png");
         ImageView imageViewGO = new ImageView(imageGO);
@@ -628,7 +645,7 @@ public class Controller {
         pane.getChildren().add(imageViewWin);
     }
 
-    boolean check(ImageView imageView) {
+    boolean checkLocationCanCreate(ImageView imageView) {
         ArrayList<ImageView> road = new ArrayList<>();
 
         road.add(imageTest1);

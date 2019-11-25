@@ -36,22 +36,22 @@ public class Tower implements GameTile{
 
     @Override
     public double getPosX() {
-        return imageViewBase.getLayoutX() + 15;
+        return imageViewBase.getLayoutX() + 18;
     }
 
     @Override
     public double getPosY() {
-        return imageViewBase.getLayoutY() + 15;
+        return imageViewBase.getLayoutY() + 21;
     }
 
     @Override
     public double getHeight() {
-        return 30 ;
+        return 36 ;
     }
 
     @Override
     public double getWidth() {
-        return 30;
+        return 43;
     }
     public ImageView getImageViewGun()
     {

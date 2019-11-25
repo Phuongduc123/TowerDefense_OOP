@@ -17,12 +17,13 @@ public class NormalTower extends Tower {
         setImageViewBase(new ImageView(getImageBase()));
         setImageViewGun( new ImageView(getImageGun()));
 
-        getImageViewGun().setFitWidth(25);
-        getImageViewGun().setFitHeight(40);
-        getImageViewBase().setFitWidth(30);
-        getImageViewBase().setFitHeight(30);
+        getImageViewGun().setFitWidth(38);
+        getImageViewGun().setFitHeight(97);
+        getImageViewBase().setFitWidth(36);
+        getImageViewBase().setFitHeight(43);
         getImageViewRange().setFitWidth(140);
         getImageViewRange().setFitHeight(140);
+
         setSpeed(15);
         setShootingRange(700);
         setPrice(2);
@@ -44,22 +45,22 @@ public class NormalTower extends Tower {
 
     @Override
     public double getPosX() {
-        return getImageViewBase().getLayoutX() + 15;
+        return getImageViewBase().getLayoutX() + 18;
     }
 
     @Override
     public double getPosY() {
-        return getImageViewBase().getLayoutY() + 15;
+        return getImageViewBase().getLayoutY() + 21;
     }
 
     @Override
     public double getHeight() {
-        return 30;
+        return 36;
     }
 
     @Override
     public double getWidth() {
-        return 30;
+        return 43;
     }
     public ImageView getImageViewGun()
     {
